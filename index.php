@@ -17,7 +17,7 @@
 <button onClick="warning('Предупреждение');">Предупреждение</button><br><br>
 <button onClick="error('Ошибка');">Ошибка</button><br><br>
 <button onClick="info('Информация')">Информация</button><br><br>
-<button onClick="input('placeholder', '', 'Какой-то текст', 'Принять', 'Отмена');">Input</button><br><br>
+<button onClick="input('placeholder', 'Какой-то текст', 'Принять', 'Отмена');">Input</button><br><br>
 <button onClick="select('Поделиться', 'Комментировать', 'Редактировать', 'Удалить');">Select</button><br><br>
 <input type="text" id="departure" value="Выбор даты">
 <script>$( "#departure" ).dateDropper();</script>

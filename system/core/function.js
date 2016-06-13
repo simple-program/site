@@ -10,29 +10,37 @@ notie.setOptions({
 	backgroundClickDismiss: true
 });
 
-function success(string) {
-	notie.alert(1, string);
+function success(string, second) {
+	if(second == undefined) second = 4;
+	notie.alert(1, string, second);
 }
 
-function warning(string) {
-	notie.alert(2, string, 2);
+function warning(string, second) {
+	if(second == undefined) second = 4;
+	notie.alert(2, string, second);
 }
 
-function error(string) {
-	notie.alert(3, string, 2);
+function error(string, second) {
+	if(second == undefined) second = 4;
+	notie.alert(3, string, second);
 }
 
-function info(string) {
-	notie.alert(4, string, 2);
+function info(string, second) {
+	if(second == undefined) second = 4;
+	notie.alert(4, string, second);
 }
 
 function ask(string, one, two, func1, func2) {
+	if(one == undefined) one = "Принять";
+	if(two == undefined) two = "Отмена";
 	return notie.confirm(string, one, two, func1, func2);
 
 
 }
 
-function input(placeholder, value, text, one, two, func1, func2) {
+function input(placeholder, text, one, two, value, func1, func2) {
+	if(one == undefined) one = "Принять";
+	if(two == undefined) two = "Отмена";
 	notie.input({
 		type: 'text',
 		placeholder: placeholder,
@@ -41,7 +49,7 @@ function input(placeholder, value, text, one, two, func1, func2) {
 }
 
 function select(t1, t2, t3, t4, s1, s2, s3, s4) {
-	notie.select("<<i>Выберите действие</i>",
+	notie.select("<i>Выберите действие</i>",
 		[
 		{ title: t1 },
 		{ title: t2, color: '#57BF57' },
