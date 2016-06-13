@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap 101 Template</title>
+	<meta charset="utf-8" >> <!-- ЕБАННАЯ БЛЯТЬ СКОБОЧКА, ЕСЛИ ЕЕ УБРАТЬ, ТО НИЧЕГО НЕ РАБОТАЕТ. ШО ЦЕ ЗА ХУЕТА?! -->
+	<title>Test Page</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="system/js/notie/dist/notie.css">
+	<script src="system/js/notie/notie.js"></script>
+	<script src="system/core/function.js"></script>
+	<link rel="stylesheet" href="system/js/datedrop/datedropper.css">
+	<script src="system/js/datedrop/datedropper.js"></script>
 
-  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-  <div class="row">
-    <div class="color col-md-3 col-sm-3 col-xs-3 col-lg-3">.col-md-1</div>
-    <div class="colors col-md-9 col-sm-9 col-xs-9 col-lg-9">.col-md-1</div>
-  </div>
-  </div>
-  
-  <style>
-    .color {
-      background-color: red;
-    }
-    .colors {
-      background-color: blue;
-    }
-  </style>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="bootstrap/js/bootstrap.js"></script>
+<br>
+<button onClick="success('Уведомление') ">Уведомление</button><br><br>
+<button onClick="warning('Предупреждение');">Предупреждение</button><br><br>
+<button onClick="error('Ошибка');">Ошибка</button><br><br>
+<button onClick="info('Информация')">Информация</button><br><br>
+<button onClick="input('placeholder', '', 'Какой-то текст', 'Принять', 'Отмена');">Input</button><br><br>
+<button onClick="select('Поделиться', 'Комментировать', 'Редактировать', 'Удалить');">Select</button><br><br>
+<input type="text" id="departure" value="Выбор даты">
+<script>$( "#departure" ).dateDropper();</script>
 </body>
 </html>
